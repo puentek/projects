@@ -25,3 +25,4 @@ for num in range(1,N+1):
         
     else: 
         print(str(num))
+print("Done!")
