@@ -20,3 +20,11 @@ For loops
   returns collection of numbers 
 
 
+Errors and Debugging 
+
+syntax errors 
+    look where the error pops up
+    look what comes before it
+    set break points so that it can stop
+    
+
