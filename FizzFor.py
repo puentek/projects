@@ -13,7 +13,6 @@
 number = str(input("Enter a number: "))
 N= int(number)
 for num in range(1,N+1):
-    # print(num+1)
     if num%3 == 0 and num%5 ==0:
         print(str(num)+ ' Fizz Buzz')
 
