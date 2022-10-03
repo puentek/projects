@@ -1,0 +1,22 @@
+Booleans and Comparisons
+
+The &lt operator returns true if the value on the left is less than the value on the right.
+== is used to check if two values are equal
+The opposite of == is != it is the same idea but returns True if things are not equal and returns False if they are equal.
+
+
+Conditionals 
+
+True and false conditional statements. 
+If false the indented code will not pass and go to the next indented part
+Ex of bank trasaction. 
+If else statements 
+
+Loops 
+Doing a list of things over a varied amount of time. 
+while loops 
+For loops 
+  for in range (7): 
+  returns collection of numbers 
+
+
