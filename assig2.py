@@ -10,6 +10,27 @@
     **You will write two different versions of this assignment, one accomplishes the task using a "while" loop, the other uses a "for" loop. '''
 
 
-print("Enter a nummber: ")
-num = str(input())
+# print("Enter a nummber: ",num)
+# i = 0
+# if int(num)%3 == 0:
+#     print(i+1)
+#     print("Fizz")
 
+# elif int(num)%5 == :
+#     print("No")
+# n = int(num)
+
+
+number = str(input("Enter a number: "))
+N = int(number)
+for num in range(int(N)):
+    if num % 3 == 0:
+        print("Fizz")
+    
+    elif num % 5 == 0:
+        print("Buzz")
+
+    elif num % 3 == 0 and num %5 ==0: 
+        print("Fizz Buzz")
+    
+    else
