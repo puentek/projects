@@ -2,20 +2,23 @@
 
 number = str(input("Enter a number: "))
 num= int(number)
-
-
-while (num >0):
+nm = num+1
+start = 0
+while (start <= num):
     
-    if num%3 == 0 and num%5 ==0:
-        print(str(num)+ ' Fizz Buzz')
+    if start%3 == 0 and start%5 ==0:
+        # print(start)
+        print(str(start)+ ' Fizz Buzz')
     
-    elif num%5 ==0: 
-       print(str(num)+ ' Buzz')
+    elif start%5 ==0: 
+       print(str(start)+ ' Buzz')
 
-    elif num% 3 == 0:
-         print(str(num)+ ' Fizz')
+    elif start% 3 == 0:
+         print(str(start)+ ' Fizz')
         
     else: 
-        print(str(num)) 
-    num -=1
+        print(str(start))
+    start += 1 
+    # num +=1
 print("Done!")
+
