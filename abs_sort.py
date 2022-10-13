@@ -19,7 +19,7 @@ def abs_sort(list):
             elif (abs(new_list[j]) == abs(new_list[j+1])) & (new_list[j] > new_list[j+1]):
                 ""
 
-            elif (abs(new_list[j]) == abs(new_list[j+1])) & (new_list[j] > new_list[j+1]):
+            elif (abs(new_list[j]) == abs(new_list[j+1])) & (new_list[j] < new_list[j+1]):
                 new_list[j+1],new_list[j] = new_list[j], new_list[j+1]
             
             else: 
