@@ -24,7 +24,30 @@ def abs_sort(list):
             
             else: 
                 ""
-    print(new_list)
+    print(f'This is the abs_sort new_list: {new_list}')
     return new_list
+# This is the original list that will be passed through the function 
+list = [5, -2, 10, -13, 2, 20]
+abs_sort(list)
 
-abs_sort([5, -2, 10, -13, 2, 20])
+def abs_sort_in_place(org_list):
+    # org_list = org_list
+    for i in range(len(org_list)-1):
+        for  j in range(len(org_list)-1):
+            if (abs(org_list[j]) > abs(org_list[j+1])):
+                org_list[j+1], org_list[j] = org_list[j], org_list[j+1]
+            
+            elif (abs(org_list[j]) == abs(org_list[j+1])) & (org_list[j] > org_list[j+1]):
+                ""
+
+            elif (abs(org_list[j]) == abs(org_list[j+1])) & (org_list[j] < org_list[j+1]):
+                org_list[j+1],org_list[j] = org_list[j], org_list[j+1]
+            
+            else: 
+                ""
+
+    print(f'This is the abs_sort_in_place(org_list): {org_list}')
+    return org_list
+
+org_list = [5, -2, 10, -13, 2, 20]
+abs_sort_in_place(org_list)
