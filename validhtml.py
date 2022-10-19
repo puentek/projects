@@ -1,6 +1,8 @@
 import re
 # Task for this code
 # 1. make sure the stuff w/out the <> is not printed just returned 
+    #  This would look something like this: 
+    # ['<a>', '<b>', '<c>', '</c>', '</b>', '<d>', '</d>', '</a>']
 # 2. make sure the string is valid 
 
 #  This is supposed to be the output you should be getting 
@@ -17,5 +19,15 @@ example_set = ['''<a><b><c></c></b></a>''',
  '''<foo><bar></bar></foo></foo>''',
  '''<foo><bar></foo></bar>''']
 
-def valid_html(test_strings):
-    example_set = test_strings
+
+
+i = 0
+ex0 = example_set[i+1]
+spt= '>, '.join(ex0.split('>'))
+print(spt)
+
+
+# def valid_html(test_strings):
+#     for i in range(example_set):
+        # print(example_set[i])
+
