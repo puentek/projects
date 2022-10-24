@@ -19,15 +19,19 @@ example_set = ['''<a><b><c></c></b></a>''',
  '''<foo><bar></bar></foo></foo>''',
  '''<foo><bar></foo></bar>''']
 
-
-
-i = 0
-ex0 = example_set[i+1]
-spt= '>, '.join(ex0.split('>'))
-print(spt)
-
-
+# assignment requirements do not delete asd, srings returned in the end don't have to be deleted
 # def valid_html(test_strings):
-#     for i in range(example_set):
-        # print(example_set[i])
+#     
 
+new_ex = []
+for k in range(len(example_set)):
+    
+    wait = example_set[k].split('>')
+    for i in range(len(wait)):
+        wait[i] = wait[i]+'>'
+
+    new_ex.append(wait)
+
+
+    # print(new_ex)
+print(new_ex[1])
