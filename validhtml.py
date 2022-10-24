@@ -27,11 +27,13 @@ new_ex = []
 for k in range(len(example_set)):
     
     wait = example_set[k].split('>')
+    
+    wait = wait[:-1]
+    # print(wait)
     for i in range(len(wait)):
         wait[i] = wait[i]+'>'
 
+
     new_ex.append(wait)
+print(new_ex)
 
-
-    # print(new_ex)
-print(new_ex[1])
