@@ -32,8 +32,17 @@ for k in range(len(example_set)):
     # print(wait)
     for i in range(len(wait)):
         wait[i] = wait[i]+'>'
-
+    
 
     new_ex.append(wait)
 print(new_ex)
+
+# char = re.compile(r'<.*>') 
+#         # now lets look for the matching object aka mo
+#         # having an issue here 
+# mo = char.search(new_ex[k])
+# mg = mo.group()
+        # print(mg)
+                                            
+
 

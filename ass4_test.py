@@ -1,4 +1,4 @@
-from email.errors import NoBoundaryInMultipartDefect
+
 import re 
 # txt = ['''<a><b><c></c></b></a>''',
 #  '''<foo>asd<bar>alksjd</bar><p>asldkj</p></foo>''',
@@ -12,12 +12,6 @@ example_set = ['''<a><b></b></a>''',
  '''<foo><bar></bar></foo></foo>''',
  '''<foo><bar></foo></bar>''']
 
-
-# use regular expressions; re.split
-#  search for the tag and return what was found; 
-# 
-# . is any or no character 
-#  * is 0 or more occurences of them 
 
 
 new_ex = []
@@ -42,9 +36,10 @@ for i in range(len(example_set)):
     for k in range(len(new_ex[i])):
         char = re.compile(r'<.*>')
         mo = char.search(new_ex[i][k])
-        slash = re.compile(r'</.*>')
+        slash = re.compile(r'</?.*>')
         ms = slash.search(new_ex[i][k])
-        match_let = '[a-z]'
+        # match_letter= re.compile(r'[a-z]..')
+        # match_let = '[a-z]'
         print(f'mo: {mo}')
         print(f'ms: {ms}')
         #
@@ -57,20 +52,29 @@ for i in range(len(example_set)):
             #  have to check if the letter is the same 
             # Issue in having the / there
 
-            if new_ex[i][k] == new_ex[i][k-1]:
+            # if new_ex[i][k] == new_ex[i][k-1]:
+            #     process_string.append(True)
+            
+            if mo == ms:
                 process_string.append(True)
-
+                print(f'process_string: {process_string}')
+            
 
             # process_string = new_ex
-            new_ex = new_ex[:-1]
+            # new_ex = new_ex[:-1]
             
-            for l in range(len(new_ex[i][k])):
-                new_ex = new_ex[:-1]
-            process_string.append(True)
-
-            
+            # for l in range(len(new_ex[i][k])):
+            #     new_ex = new_ex[:-1]
+            # process_string.append(True)
         else: 
             process_string.append(False)
+
+
+
+
+
+
+
 
 # example_set.append(process_string)
             
