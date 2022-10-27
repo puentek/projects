@@ -56,9 +56,18 @@ for i in range(len(example_set)):
             # print(tup_mg_mgs)
             # print(tup_mg_mgs[0])
             if tup_mg_mgs[0] == tup_mg_mgs[1]:
-                print(True)
+                process_string.append(copy_new_ex)
+                process_string.append(True)
+                print(process_string)
+# 
             else: 
-                print(False)
+                # process_string.append(copy_new_ex)
+                process_string.append(copy_new_ex)
+                process_string.append(False)
+                print(process_string)
+    
+
+
 
             
             

@@ -36,12 +36,14 @@ for i in range(len(example_set)):
     for k in range(len(new_ex[i])):
         char = re.compile(r'<.*>')
         mo = char.search(new_ex[i][k])
+        mg = mo.group()
         slash = re.compile(r'</?.*>')
         ms = slash.search(new_ex[i][k])
+        mg_s = ms.group()
         # match_letter= re.compile(r'[a-z]..')
         # match_let = '[a-z]'
-        print(f'mo: {mo}')
-        print(f'ms: {ms}')
+        print(f'mo_group: {mg}')
+        print(f'ms: {mg_s}')
         #
         if ms is not None: 
             # mo = char.search(new_ex[i][k])
