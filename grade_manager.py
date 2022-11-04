@@ -3,20 +3,20 @@
 class Assignment:
     def __init__(self,name,max_score):
         self.name = name 
-        self.max_Score = max_score
+        self.max_score = max_score
         self.grade = None 
     def assign_grade(self,grade):
         
         self.grade = grade 
-        if self.grade > self.max_Score:
+        if self.grade > self.max_score:
             self.grade = None 
             # print(self.grade)
         else: 
             self.grade = self.grade
             # print(self.grade) 
 
-assignment = Assignment('asign',10)
-assignment.assign_grade(9)
+# assignment = Assignment('asign',10)
+# assignment.assign_grade(9)
 # student has a list of assignment objects submited 
 # 2 indepedent thingss
 # list of assignmet 
@@ -42,8 +42,7 @@ class Student:
         for i in range(len(self.assignment)):
             if name == self.assignment[i].name:
                 return self.assignment[i]
-            else:
-                " "
+            
         return None 
         
         
@@ -72,10 +71,10 @@ class Student:
          
 
 
-student=Student(725,'kp','jk','7kp')
+# student=Student(725,'kp','jk','7kp')
 # initializer with an empty list 
-student.get_full_name()
-student.submit_assignmet(assignment)
+# student.get_full_name()
+# student.submit_assignmet(assignment)
 
 
 # student.get_assignment()
