@@ -26,7 +26,7 @@ r =  requests.get(url_trivia_link,headers=headers)
 response_dict = r.json()
 
 # Process results 
-print(response_dict.keys())
+# print(response_dict.keys())
 
 # print(f"Response Code: {response_dict['response_code']}")
 # print(f"Results Info : {response_dict['results']}")
@@ -48,6 +48,7 @@ print(f"Question: {html.unescape(repo_dict['question'])}")
 
 choices = html.unescape(repo_dict['incorrect_answers'])
 choices.append(html.unescape(repo_dict['correct_answer']))
+answer = html.unescape(repo_dict['correct_answer'])
 # # wrong = repo_dict['incorrect_answers']
 # # print(choices)
 # random.shuffle(choices)
@@ -57,16 +58,49 @@ choices.append(html.unescape(repo_dict['correct_answer']))
 
 dict_choices = {"1": choices[0], "2": choices[1], 
                 "3": choices[2], "4": choices[3]}
+# dict_solution = {"4": choices[3]}
+
 values = list(dict_choices.values())
-random.shuffle(values)
-# for value in values:
-#     print(value)
+# random.shuffle(values)
+
 for count, value in enumerate(values,start=1): 
+
     print(count, value)
+
+your_choice = input()
+
+
+def get_key(val):
+    for key, value in dict_choices.items():
+        if val == value:
+            return key
+ 
+    return "key doesn't exist"
+print(get_key(choices[3]))
+
+# for key, value in dict_choices.items():
+#     if your_choice == choices[3]:
+#         print("That is correct")
+#     else:
+#         print(f"That is incorrect. The correct answer is : {choices[3]}")
+# print(str(list(dict_choices.values()).index(choices[3])))
+# if str(your_choice) == str(list(dict_choices.values()).index(choices[3])):
+#         print("That is correct")
+# else:
+#         print(f"That is incorrect. The correct answer is : {choices[3]}")
+
+if str(your_choice) == str(get_key(choices[3])):
+        print("That is correct")
+else:
+        print(f"That is incorrect. The correct answer is : {choices[3]}")
 
 # your_choice = input()
 
-# if your_choice != repo_dict['correct_answer']:
+
+
+
+# if your_choice != dict_choices[]
+
 
 
 # right = repo_dict['correct_answer']
