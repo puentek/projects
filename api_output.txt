@@ -1,0 +1,106 @@
+Welcome to Trivia Bot 5000, Please Select a Category of Trivia: 
+ 1. Entertainment: film
+ 2. Sports
+ 3. Animals
+3
+You picked Animals, how many questions do you want?
+6
+Question: What is the fastest  land animal?
+1 Lion
+2 Pronghorn Antelope
+3 Cheetah
+4 Thomson&rsquo;s Gazelle
+1
+That is incorrect. The correct answer is : Cheetah
+Question: The Kākāpō is a large, flightless, nocturnal parrot native to which country?
+1 New Zealand
+2 South Africa
+3 Australia
+4 Madagascar
+2
+That is incorrect. The correct answer is : New Zealand
+Question: Hippocampus is the Latin name for which marine creature?
+1 Whale
+2 Seahorse
+3 Dolphin
+4 Octopus
+3
+That is incorrect. The correct answer is : Seahorse
+Question: What is Grumpy Cat's real name?
+1 Minnie
+2 Broccoli
+3 Sauce
+4 Tardar Sauce
+4
+That is correct
+Question: Which class of animals are newts members of?
+1 Mammals
+2 Fish
+3 Amphibian
+4 Reptiles
+4
+That is incorrect. The correct answer is : Amphibian
+Question: What colour is the female blackbird?
+1 Black
+2 Yellow
+3 White
+4 Brown
+4
+That is correct
+Your game is over, you got 2 out of 6 correct
+Thanks for playing!!
+
+
+
+Welcome to Trivia Bot 5000, Please Select a Category of Trivia: 
+ 1. General Knowledge
+ 2. Vehicles
+ 3. Science: Gadgets
+2
+You picked Vehicles, how many questions do you want?
+6
+Question: The Italian automaker Lamborghini uses what animal as its logo?
+1 Bat
+2 Bull
+3 Snake
+4 Horse
+2
+That is correct
+Question: Which of the following car manufacturers had a war named after it?
+1 Ford
+2 Honda
+3 Toyota
+4 Volkswagen
+2
+That is incorrect. The correct answer is : Toyota
+Question: Which car tire manufacturer is famous for its "P Zero" line?
+1 Goodyear
+2 Pirelli
+3 Michelin
+4 Bridgestone
+2
+That is correct
+Question: The LS2 engine is how many cubic inches?
+1 402
+2 346
+3 364
+4 376
+4
+That is incorrect. The correct answer is : 364
+Question: The LS7 engine is how many cubic inches?
+1 376
+2 427
+3 364
+4 346
+4
+That is incorrect. The correct answer is : 427
+Question: The LS3 engine is how many cubic inches?
+1 364
+2 346
+3 376
+4 427
+4
+That is incorrect. The correct answer is : 376
+Your game is over, you got 2 out of 6 correct
+Thanks for playing!!
+

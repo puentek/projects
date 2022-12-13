@@ -1,4 +1,6 @@
 import re
+import time 
+
 # Task for this code
 # 1. make sure the stuff w/out the <> is not printed just returned 
     #  This would look something like this: 
@@ -123,7 +125,7 @@ example_set = ['''<a><b><c></c></b></a>''',
     
 
 
-
+start = time.process_time() 
 new_ex = []
 for i in range(len(example_set)):
     wait = example_set[i].split('>')
@@ -176,5 +178,7 @@ for i in range(len(example_set)):
                 process_string.append(copy_new_ex)
                 process_string.append(False)
                 # print(process_string)
+end = time.process_time()
+print("Time elapsed was " + str(end-start))
     
 

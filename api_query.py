@@ -1,110 +1,70 @@
-from pprint import pp 
+
 import requests
 import json 
 import html 
 import random 
 
 
-# lets load some data !! 
-# Here lets make sure to have url of different categories
-# url_1 = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple"
-# dict_urls = {}
-dict = { 11: "Entertainment: film", 21: "Sports", 27: "Animals" }
-
-print("Welcome to Trivia Bot 5000, Please Select a Category of Trivia: \n 11. Entertainment: film \n 21. Sports \n 27. Animals  ")
+dict = { 9: "General Knowledge", 28: "Vehicles", 30: "Science: Gadgets" }
+print("Welcome to Trivia Bot 5000, Please Select a Category of Trivia: \n 1. General Knowledge \n 2. Vehicles \n 3. Science: Gadgets  ")
 category_selected = input()
-print(f'You picked {dict[int(category_selected)]}, how many questions do you want?')
+if int(category_selected) == 1:
+    converted_selection = 9
+elif int(category_selected) == 2:
+    converted_selection = 28
+else:
+    converted_selection = 30
+
+print(f'You picked {dict[int(converted_selection)]}, how many questions do you want?')
 num_questions = input()
-url_trivia= (f'https://opentdb.com/api.php?amount={str(num_questions)}&category={str(category_selected)}&difficulty=easy&type=multiple')
+url_trivia= (f'https://opentdb.com/api.php?amount={str(num_questions)}&category={str(converted_selection)}&difficulty=easy&type=multiple')
 url_trivia_link = url_trivia
-# print(url_trivia_link)
-# str(input())
 headers = {'Accept': 'application/vnd.opentdb.v3+json'}
 r =  requests.get(url_trivia_link,headers=headers)
-# Here lets check if this works 
-# print(f'Status code: {r.status_code}')
 response_dict = r.json()
-
-# Process results 
-# print(response_dict.keys())
-
-# print(f"Response Code: {response_dict['response_code']}")
-# print(f"Results Info : {response_dict['results']}")
-
 repo_dicts = response_dict['results']
-# print(f"Results returned: {len(repo_dicts)}")
-
 repo_dict = repo_dicts[1]
-# print(f"\nKeys: {len(repo_dict)}")
-# for key in sorted(repo_dict.keys()):
-#     print(key)
+correct_count = 0
 
-# print("\n Selected information about the questions")
-print(f"Question: {html.unescape(repo_dict['question'])}")
-# print(f"Pick from the choices: {repo_dict['incorrect_answers']} {repo_dict['correct_answer']} ")
-# print(repo_dict['incorrect_answers'], repo_dict['correct_answer'])
+for repo_dict in repo_dicts:
+    print(f"Question: {html.unescape(repo_dict['question'])}")
 
+    choices = html.unescape(repo_dict['incorrect_answers'])
+    
+    correct_ans = html.unescape(repo_dict['correct_answer'])
+    choices.append(correct_ans)
 
-
-choices = html.unescape(repo_dict['incorrect_answers'])
-choices.append(html.unescape(repo_dict['correct_answer']))
-answer = html.unescape(repo_dict['correct_answer'])
-# # wrong = repo_dict['incorrect_answers']
-# # print(choices)
-# random.shuffle(choices)
-# for count, wr in enumerate(choices,start=1): 
-#     print(count, wr)
-
-
-dict_choices = {"1": choices[0], "2": choices[1], 
+    dict_choices = {"1": choices[0], "2": choices[1], 
                 "3": choices[2], "4": choices[3]}
-# dict_solution = {"4": choices[3]}
+    values = list(dict_choices.values())
+    
+    random.shuffle(values)
+    for count, value in enumerate(values,start=1): 
+        print(count, value)
 
-values = list(dict_choices.values())
-# random.shuffle(values)
+    your_choice = input()
 
-for count, value in enumerate(values,start=1): 
+    def get_key(val):
+        for key, value in dict_choices.items():
+            if val == value:
+                return key
 
-    print(count, value)
+        return "key doesn't exist"
+    
+    # correct_count = 0
 
-your_choice = input()
-
-
-def get_key(val):
-    for key, value in dict_choices.items():
-        if val == value:
-            return key
- 
-    return "key doesn't exist"
-print(get_key(choices[3]))
-
-# for key, value in dict_choices.items():
-#     if your_choice == choices[3]:
-#         print("That is correct")
-#     else:
-#         print(f"That is incorrect. The correct answer is : {choices[3]}")
-# print(str(list(dict_choices.values()).index(choices[3])))
-# if str(your_choice) == str(list(dict_choices.values()).index(choices[3])):
-#         print("That is correct")
-# else:
-#         print(f"That is incorrect. The correct answer is : {choices[3]}")
-
-if str(your_choice) == str(get_key(choices[3])):
+    if values[int(your_choice)-1] == correct_ans:
         print("That is correct")
-else:
+        correct_count = correct_count + 1
+        # print(f"correct_count: {correct_count}")
+
+    else:
         print(f"That is incorrect. The correct answer is : {choices[3]}")
-
-# your_choice = input()
-
-
-
-
-# if your_choice != dict_choices[]
+    
+print(f"Your game is over, you got {str(correct_count)} out of {str(num_questions)} correct")
+print("Thanks for playing!!")
 
 
 
-# right = repo_dict['correct_answer']
-# for count, rt in enumerate(right,start=1): 
-#     print()
 
-# html.unescape
+
